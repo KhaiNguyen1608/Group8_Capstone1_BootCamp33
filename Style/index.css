@@ -9,11 +9,175 @@ ul {
     list-style: none;
 }
 
-.header_banner {
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: #232121;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  color: #232121;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.title-subhny {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: #ff6600;
+    display: block;
+    font-family: 'Pacifico', cursive;
+}
+
+/*****************************************************************/
+.header-banner {
     background-size: cover;
     background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)), 
     url(../images/banner1.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 700px;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_menu a {
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+}
+
+h1 a.logo-brand {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header-banner .bannerhny-info h3 {
+    font-size: 54px;
+    line-height: 64px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.header-banner .bannerhny-info p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+}
+
+.btn-style, .btn-white {
+    padding: 12px 45px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    transition: 0.3s ease-in;
+    border-radius: 6px;
+    border: 2px solid transparent;
+}
+
+.btn-white {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.content-1 .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+
+.content-1 .title-w3l {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.content-1 p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(22, 28, 45, 0.7);
+    font-family: 'Quicksand', sans-serif;
+}
+
+/****************** Agent ********************/
+.agent-block .row {
+    background-color: #ff6600;
+}
+
+.agent-block .row {
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-right: -15px;
+    margin-left: -15px; */
+}
+
+
+.title-w3l {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+}
+
+.agent-block p {
+    color: #fff;
+}
+
+
+
+.agent-block .title-subhny.two {
+    color: #fff;
+}
+
+.agent-block .subscribe-cat {
+    display: flex;
+    column-gap: 30px;
+}
+
+.agent-block .subscribe-cat-link{
+    text-decoration: none;
+    font-weight: 700;
+    color: #232121;
+    font-size: 20px;
+}
+
+.agent-block .subscribe-cat .icon{
+    background-color: white;
+    height: 70px;
+    width: 70px ;
+    text-align: center;
+    border-radius: 6px
+}
+
+.agent-block .subscribe-cat .icon span.fa {
+    color: #ff6600;
+    font-size: 25px;
+    line-height: 70px;
 }
