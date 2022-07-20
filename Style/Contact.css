@@ -481,3 +481,7 @@ h2 {
 .copyright .container .row .footer-list-29 a:hover {
     color: #ff6600;
 }
+
+.offcanvas-end {
+    z-index: 100000;
+}
