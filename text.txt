@@ -1,3 +1,3 @@
 Nguyễn Khải: Home(index) - About.
-Tuấn Nghĩa: LandingPage - Contact.
-Hoàng Nam: Services - Blog.
+Hoàng Tuấn Nghĩa: LandingPage - Contact.
+Lê Hoàng Nam: Services - Blog.
