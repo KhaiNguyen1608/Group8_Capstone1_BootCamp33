@@ -1,8 +1,6 @@
-
 * {
-    margin: 0;
+    margin:  0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 ul {
@@ -37,18 +35,12 @@ p {
     font-family: 'Quicksand', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-  color: #232121;
-  font-family: 'Quicksand', sans-serif;
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
-
 
 
 .title-subhny {
@@ -92,12 +84,6 @@ a,a:hover {
     line-height: 70px;
 }
 
-.btn-white {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-}
-
 .btn-primary {
     color: #fff;
     background-color: #ff6600;
@@ -112,6 +98,24 @@ a,a:hover {
     transition: 0.3s ease-in;
     border-radius: 6px;
     border: 2px solid transparent;
+}
+
+.btn-white {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-white:hover {
+    background-color: #ffffff;
+    color: #ff6600;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    opacity: 0.8;
 }
 
 .card {
@@ -129,6 +133,10 @@ a,a:hover {
 
 .radius-image {
     border-radius: 6px;
+}
+
+.mr-lg-4, .mx-lg-4 {
+    margin-right: 1.5rem !important;
 }
 
 .mb-5, .my-5 {
@@ -239,112 +247,173 @@ a,a:hover {
 }
 
 /*******************************  HEADER **********************************/
-.header-banner {
+.banner {
     background-size: cover;
-    background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)), 
-    url(../images/banner1.jpg);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)), url(../images/imgLandingPage/banner1.jpg);
+    background-position: initial;
     background-attachment: fixed;
     min-height: 700px;
 }
 
-.header_menu {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-gap: 20px;
-    padding: 40px 0 20px 0;
-    align-items: center;
+.container {
+    width: 65%;
+    margin: auto;
+    padding-top: 40px;
 }
 
-.header_menu a {
+.container .header .logo h1 a {
+    font-size: 35px;
     text-decoration: none;
-}
-
-.search-bar {
-    display: flex;
-}
-
-h1 a.logo-brand {
-    margin: 0;
-    padding: 0;
-    font-size: 36px;
+    color: #ffffff;
     font-weight: 700;
-    color: #fff;
 }
 
-.right-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    align-items: center;
-}
-
-.right-content .search-bar .search .search__input {
-    display: flex;
-    flex: 1;
-    padding: 10px 50px 10px 20px;
+.container .header .menu .searchinput {
+    padding: 10px 50px 10px 10px;
     height: 45px;
     font-size: 16px;
-    color: var(--font-color);
-    border: none;
-    font-weight: 400;
-    border-radius: 6px;
-    position: relative;
-    right: 0;
-    background: var(--bg-color);
     outline: 0;
-    border: 1px solid var(--bg-color);
+    border-radius: 5px;
+    border: 1px solid #ffffff;
 }
 
+.container .header .menu .search .search-box {
+    position: relative;
+    width: 250px;
+}
 
-.right-content .search-bar .search .search__icon {
+.container .header .menu .search span {
     position: absolute;
-    right: 20px;
-    font-size: 15px;
     top: 15px;
+    right: 20px;
     cursor: pointer;
+    color: rgb(22, 28, 45, 0.7);
 }
 
-i.fa-moon {
-    color: #eee;
-    font-size: 20px;
+.banner .header .menu .sunmoon {
+    position: relative;
 }
 
-.header-banner .bannerhny-info {
-    max-width: 600px;
-    text-align: left;
-    margin-top: 100px;
+.banner .header .menu .sunmoon .gg-sun {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
 }
 
-.header-banner .bannerhny-info h3 {
+.banner .header .menu .sunmoon .gg-moon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+}
+
+.banner .header .menu .sunmoon {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#toggle_sunmoon {
+    display: none;
+}
+
+#toggle_sunmoon:checked~.gg-sun {
+    display: block;
+}
+
+#toggle_sunmoon:checked~.gg-moon {
+    display: none;
+}
+
+.banner .container .header {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 20px;
+}
+
+.banner .container .header .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.banner .container .infor {
+    padding-top: 100px;
+    width: 50%;
+}
+
+.banner .container .infor h1 {
+    color: #ffffff;
     font-size: 54px;
     line-height: 64px;
     font-weight: 600;
-    text-transform: capitalize;
-    color: #fff;
 }
 
-.header-banner .bannerhny-info p {
+.banner .container .infor p {
     font-size: 16px;
     line-height: 28px;
     color: #fff;
+    margin-top: 30px;
+    padding-bottom: 40px;
 }
 
-.content-1 .title-w3l {
-    font-size: 38px;
-    line-height: 48px;
-    font-weight: 600;
+.banner .container .infor a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 45px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    transition: 0.5s linear;
 }
 
-.content-1 p {
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    line-height: 28px;
-    color: rgba(22, 28, 45, 0.7);
-    font-family: 'Quicksand', sans-serif;
+.banner .container .infor i {
+    font-size: 16px;
+    padding-left: 5px;
 }
 
+.banner .container .infor a:hover {
+    background-color: #ffffff;
+    color: #ff6600;
+}
+
+.banner .container .navbar .container-fluid i {
+    color: #fff !important;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 0 8px;
+}
+
+.banner .container .navbar .container-fluid button {
+    outline: none;
+    border: none;
+    background: none;
+    margin-top: -10px;
+    margin-left: -40px;
+}
+
+.banner .container .navbar .container-fluid .offcanvas-body a {
+    color: rgb(22, 28, 45, 0.7);
+    text-decoration: none;
+}
+
+.banner .container .navbar .container-fluid .offcanvas-body a:hover {
+    color: #ff6600;
+}
+
+.offcanvas-end {
+    z-index: 100000;
+}
+
+.title h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #ff6600;
+    font-family: 'Pacifico', cursive;
+}
 /****************** Agent ********************/
 .agent-block .row {
     background-color: #ff6600;
@@ -466,6 +535,10 @@ i.fa-moon {
     font-weight: 700;
 }
 
+.w3l-res-categories .content-left-sec:hover {
+    opacity: 0.8;
+}
+
 
 /********************* features *****************************/
 
@@ -557,16 +630,6 @@ i.fa-moon {
     padding-left: 10px;
 }
 
-.btn-white {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-}
-
-.mr-lg-4,
-  .mx-lg-4 {
-    margin-right: 1.5rem !important;
-}
 
 /************************** Stats ***************************************************/
 
@@ -578,15 +641,16 @@ section.w3_stats {
 
 .counter {
     background-color: #fff;
-    box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     padding: 40px 20px;
     border-radius: 6px;
     text-align: center;
     transition: .3s ease;
-    -webkit-transition: .3s ease;
-    -moz-transition: .3s ease;
-    -ms-transition: .3s ease;
-    -o-transition: .3s ease;
+   
+}
+
+.counter:hover {
+    transform: translateY(-10px);
 }
 
 .counter span.fa {
@@ -758,6 +822,42 @@ section.w3_stats {
     background: #fff;
   }
   
+/****************************** Testimonials **********************************************/
+
+.testimonials .slick .item .img-responsive {
+    width: 85px;
+    height: 85px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.testimonials .slick .item h4 {
+    font-size: 50px;
+    color: #ff6600;
+    display: block;
+    font-family: initial;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.testimonials .slick .item h5 {
+    font-size: 36px;
+    color: #000000;
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.testimonials .slick .item h6 {
+    font-size: 22px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+
 
 /***************************** Footer ***************************************/
 
@@ -834,3 +934,9 @@ section.w3_stats {
     border-radius: var(--border-radius);
     transition: 0.3s;
 }
+
+.fa-brands:hover {
+    background: #ff6600;
+    color: #ffffff;
+}
+

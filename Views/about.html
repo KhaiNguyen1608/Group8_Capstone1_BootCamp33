@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diner</title>
-     <!-- FONT -->
-    <link href="//fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&;display=swap" rel="stylesheet">
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diner</title>
+   <!-- FONT -->
+  <link href="//fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&;display=swap" rel="stylesheet">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-      <!-- animate -->    
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href='https://css.gg/moon.css' rel='stylesheet'>
+  <link href='https://css.gg/sun.css' rel='stylesheet'>
+    <!-- animate -->    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   <!--CSS slick-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <!--CSS-->
    <link rel="stylesheet" href="../Style/index.css">
    <link rel="stylesheet" href="../Style/about.css">
@@ -61,24 +66,62 @@
     
     
       <!--/banner-with-header-->
-      <section class="w3l-innerpage" id="home">
+    <section class="w3l-innerpage" id="home">
         <div class="container">
           <div class="w3_hny_header">
             <div class="w3_hnyits_logo">
               <h1><a class="logo-brand" href="index.html">Diner </a></h1>
             </div>
-            <div class="right-content">
-              <div class="search-bar">
-                <!--/search-right-->
-                <form class="search position-relative">
-                    <input type="search" class="search__input" name="search" placeholder="Search here.." required="">
-                    <span class="fa fa-search search__icon"></span>
-                </form>
-                <!--//search-right-->
+            <div class="menu">
+              <div class="search">
+                  <form class="search-box">
+                      <input type="search" class="searchinput" placeholder="Search here...">
+                      <span class="fa fa-search search__icon"></span>
+                  </form>
               </div>
-           
-           
-            </div>
+              <div class="sunmoon">
+                  <label for="toggle_sunmoon">
+                  <input type="checkbox" id="toggle_sunmoon">
+                  <i class="gg-sun"></i>
+                  <i class="gg-moon"></i>
+                  </label>
+              </div>
+              <nav class="navbar navbar-light">
+                  <div class="container-fluid">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                      <i class="fa fa-bars"></i>
+                      </button>
+                      <div class="offcanvas offcanvas-end" tabindex="" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="visibility: hidden;" aria-hidden="true">
+                          <div class="offcanvas-header title">
+                              <h3 class="offcanvas-title fs-3" id="offcanvasNavbarLabel">Diner</h3>
+                              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                          </div>
+                          <div class="offcanvas-body">
+                              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="./index.html">Home</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="./about.html">About</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="./services.html">Services</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="./blog.html">Blog</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="./LandingPage.html">Landing Page</a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="./Contact.html">Contact</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </nav>
+          </div>
            
           </div>
           <!--/w3l-breadcrumb-->
@@ -90,7 +133,7 @@
             </div>
           <!--/w3l-breadcrumb-->
         </div>
-      </section>
+    </section>
       <!--//banner-with-header-->
     <div style="margin: 8px auto; display: block; text-align:center;">
     
@@ -372,13 +415,16 @@
           </div>
       
           <!-- move top -->
-          <button id="movetop" title="Go to top" style="display: block;">⤴</button>
+          <!-- <button id="movetop" title="Go to top" style="display: block;">⤴</button> -->
         
           <!-- /move top -->
         </section>
      
-    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <div id="v-w3layouts-0" style="display: block; width: 100%; margin-left: 0px;"><vdo id="parentDiv0"><vdo id="unitDivWrapper-0" style="height: 450px;"><div id="_vdo_ads_player_ai_3944" style="display: block; bottom: 10px; left: 10px;" class="vdo_floating"><div id="cross_div" style="height: 19px; display: flex;"><img src="//a.vdo.ai/core/assets/img/cross.svg" class="cross" id="vdo_ai_cross" style="width: 17px!important; height: 17px!important; top: -8px; right: -8px;"></div></div></vdo></vdo><vdo id="vdo_companion_wrapper" style="text-align: center;margin-top: 10px;"></vdo></div><script>(function(v,d,o,ai){ai=d.createElement('script');ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, '//a.vdo.ai/core/v-w3layouts/vdo.ai.js');</script>
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   
 }
 
 ul {
@@ -193,42 +193,98 @@ a,a:hover {
     align-items: center;
 }
 
-.right-content {
+.w3l-innerpage .container .w3_hny_header .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    align-items: center;
+    gap: 5px;
 }
 
-.right-content .search-bar {
-    display: flex;
-   
-}
 
-.right-content .search-bar .search .search__input {
-    display: flex;
-    flex: 1;
-    padding: 10px 50px 10px 20px;
+.container .w3_hny_header .menu .searchinput {
+    padding: 10px 50px 10px 10px;
     height: 45px;
     font-size: 16px;
-    color: var(--font-color);
-    border: none;
-    font-weight: 400;
-    border-radius: 6px;
-    position: relative;
-    right: 0;
-    background: var(--bg-color);
     outline: 0;
-    border: 1px solid var(--bg-color);
+    border-radius: 5px;
+    border: 1px solid #ffffff;
 }
 
+.container .w3_hny_header .menu .search .search-box {
+    position: relative;
+    width: 250px;
+}
 
-.right-content .search-bar .search .search__icon {
+.container .w3_hny_header .menu .search span {
     position: absolute;
-    right: 20px;
-    font-size: 15px;
     top: 15px;
+    right: 20px;
     cursor: pointer;
+    color: rgb(22, 28, 45, 0.7);
+}
+
+.container .w3_hny_header .w3_hnyits_logo  h1 a {
+    font-size: 35px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.w3l-innerpage .w3_hny_header .menu .sunmoon {
+    position: relative;
+}
+
+.w3l-innerpage .w3_hny_header .menu .sunmoon .gg-sun {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+}
+
+.w3l-innerpage .w3_hny_header .menu .sunmoon .gg-moon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+}
+
+.w3l-innerpage .w3_hny_header .menu .sunmoon {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#toggle_sunmoon {
+    display: none;
+}
+
+#toggle_sunmoon:checked~.gg-sun {
+    display: block;
+}
+
+#toggle_sunmoon:checked~.gg-moon {
+    display: none;
+}
+
+.w3l-innerpage .container .w3_hny_header {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 20px;
+}
+
+.w3l-innerpage .container .navbar .container-fluid button {
+    outline: none;
+    border: none;
+    background: none;
+    margin-top: -10px;
+    margin-left: -40px;
+}
+
+.w3l-innerpage .container .navbar .container-fluid i {
+    color: #fff !important;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 0 8px;
 }
 
 .w3l-innerpage ul.breadcrumbs-custom-path {
